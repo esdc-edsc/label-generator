@@ -66,11 +66,14 @@ What types of labels do you want to add to your project?
 2 - Dev labels
 3 - A11Y labels
 4 - Security labels
-0 - Other labels"
+0 - Gerneral labels"
 $labelSelection = Read-Host
 
-IF ($labelSelection -eq 1) {
+IF ($labelSelection -eq 0) {
+    .\general\start.ps1 $userToken $gitlabLink
+} ElseIF ($labelSelection -eq 1) {
     .\dev\key-list.ps1 $userToken $gitlabLink
+    .\general\key-list.ps1 $userToken $gitlabLink
 } ElseIf ($labelSelection -eq 2) {
     .\dev\start.ps1 $userToken $gitlabLink 
 } Else {

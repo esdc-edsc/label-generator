@@ -13,9 +13,8 @@ IF (1, 2, 3 -contains $labelSelection) {
     .\dev\key-list.ps1 $userToken $gitlabLink
 } 
 If (2, 3 -contains $labelSelection) {
-    "Standard list not avaliable yet"
-    # .\dev\standard-list.ps1 $userToken $gitlabLink
+    .\dev\standard-list.ps1 $userToken $gitlabLink
 } 
 IF (3 -contains $labelSelection) {
-    # .\dev\extra-list.ps1 $userToken $gitlabLink
+    .\dev\extra-list.ps1 $userToken $gitlabLink
 }

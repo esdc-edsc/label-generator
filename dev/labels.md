@@ -7,5 +7,11 @@
  - enhancement
 
  ### Standard labels
+ - configuration
+ - deployment
+ - maintance
+ - tests
+ - pipeline
 
  ### Extra labels
+ - feature request
