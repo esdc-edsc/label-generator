@@ -1,0 +1,12 @@
+[
+    {
+        "name": "bug",
+        "color": "#FF0000",
+        "desc": "Something isn't working"
+    },
+    {
+        "name": "enhancement",
+        "color": "#D1D100",
+        "desc": "New feature or request"
+    }
+]

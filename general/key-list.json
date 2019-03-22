@@ -1,0 +1,17 @@
+[
+    {
+        "name": "documentation",
+        "color": "#FFECDB",
+        "desc": "Deals with documentation changes"
+    },
+    {
+        "name": "duplicate",
+        "color": "#cfd3d7",
+        "desc": "This issue or merge request already exists"
+    },
+    {
+        "name": "translation",
+        "color": "#e99695",
+        "desc": "Something needs to be translated"
+    }
+]

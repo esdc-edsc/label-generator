@@ -1,0 +1,27 @@
+[
+    {
+        "name": "configuration",
+        "color": "#A295D6",
+        "desc": "This issue deals with configuration"
+    },
+    {
+        "name": "deployment",
+        "color": "#8E44AD",
+        "desc": "This issue has to do with a deployment"
+    },
+    {
+        "name": "maintance",
+        "color": "#fef2c0",
+        "desc": "General maintance (avoid using)"
+    },
+    {
+        "name": "tests",
+        "color": "#f9d0c4",
+        "desc": "Issue deals with integrated or automated tests"
+    },
+    {
+        "name": "pipeline",
+        "color": "#d4c5f9",
+        "desc": "Work related to the pipeline"
+    }
+]

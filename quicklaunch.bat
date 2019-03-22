@@ -1,3 +1,3 @@
 @echo off
-Powershell.exe -executionpolicy remotesigned -File .\labels.ps1
+Powershell.exe -executionpolicy remotesigned -File .\scripts\start.ps1
 pause

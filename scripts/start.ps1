@@ -10,9 +10,7 @@
 $gitlabEnv
 $projectId
 $userToken
-$gitlabLink
 $curlLocation
-$addMore = "n"
 
 # gather info
 
@@ -20,7 +18,7 @@ $addMore = "n"
 1- C:\Git\Git\mingw64\bin\curl.exe
 2- C:\Windows\System32\curl\curl.exe
 3- C:\Windows\SysWOW64\curl\curl.exe
-4- Other"
+0- Other"
 $curlSelector = Read-Host
 IF ($curlSelector -eq 1) {
     $curlLocation = "C:\Git\Git\mingw64\bin\curl.exe"
@@ -55,38 +53,8 @@ You have chosen to use 'https://$gitlabEnv/' as your enviornment for gitlab.
 $projectId = Read-Host -Prompt 'What is the Project ID?'
 $userToken = Read-Host -Prompt 'What is your User Token?'
 
-
-$gitlabLink = "https://$gitlabEnv/api/v4/projects/$projectId/labels"
-
-# add different sets of labels
-do {
-"
-What types of labels do you want to add to your project?
-1 - Key labels from all types
-2 - Dev labels
-3 - A11Y labels
-4 - Security labels
-0 - Gerneral labels"
-$labelSelection = Read-Host
-
-IF ($labelSelection -eq 0) {
-    .\general\start.ps1 $userToken $gitlabLink
-} ElseIF ($labelSelection -eq 1) {
-    .\dev\key-list.ps1 $userToken $gitlabLink
-    .\general\key-list.ps1 $userToken $gitlabLink
-} ElseIf ($labelSelection -eq 2) {
-    .\dev\start.ps1 $userToken $gitlabLink 
-} Else {
-    "This option is not avaliable yet."
-}
-
-" 
-  ---- done ----
-" #line break
-# check for exit
-$addMore = Read-Host -Prompt 'Would you like to add more labels (Y/n)?'
-} While ($addMore -like "y")
-
+## select and add labels
+.\scripts\select.ps1 $userToken "https://$gitlabEnv/api/v4/projects/$projectId/labels"
 
 "
   Thanks for using ESDC Labels!

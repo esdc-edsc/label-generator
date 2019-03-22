@@ -1,0 +1,12 @@
+[
+    {
+        "name": "question",
+        "color": "#d876e3",
+        "desc": "Further information is requested"
+    },
+    {
+        "name": "wontfix",
+        "color": "#ffffff",
+        "desc": "This will not be worked on"
+    }
+]
