@@ -2,8 +2,11 @@
 Defining groups of labels that can be imported to other projects for commonality within the department.
 
 ## Avaliable Labels
-* [Gerneral Labels](gerneral/labels.md)
+* [General Labels](general/labels.md)
 * [Dev Labels](dev/labels.md)
+
+### Contribute Label ideas
+[Contribution Guide](CONTRIBUTING.md)
 
 ## Instalation
 ```
