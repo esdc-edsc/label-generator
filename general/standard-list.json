@@ -8,5 +8,10 @@
         "name": "wontfix",
         "color": "#ffffff",
         "desc": "This will not be worked on"
+    },
+    {
+        "name": "discussion",
+        "color": "#FFAC8B",
+        "desc": "Issue requires discussion before it can be implemented"
     }
 ]

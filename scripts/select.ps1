@@ -11,19 +11,23 @@ do {
     0 - Key labels from all types
     1 - Gerneral labels
     2 - Dev labels
-    3 - A11Y labels
-    4 - Security labels"
+    3 - Priority labels
+    4 - A11Y labels
+    5 - Security labels"
     $selection = Read-Host
     
     IF ($selection -eq 0) {
         .\scripts\add.ps1 $userToken $gitlabLink ".\dev\key-list.json"
         .\scripts\add.ps1 $userToken $gitlabLink ".\general\key-list.json"
+        .\scripts\add.ps1 $userToken $gitlabLink ".\priority\key-list.json"
     } Else {
         $selectedType
         IF ($selection -eq 1) {
             $selectedType = "general"
         } ElseIf ($selection -eq 2) {
             $selectedType = "dev"
+        } ElseIf ($selection -eq 3) {
+            $selectedType = "priority"
         } Else {
             "This option is not avaliable yet."
         }

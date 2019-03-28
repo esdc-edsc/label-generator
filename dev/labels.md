@@ -3,15 +3,18 @@
 ## Included labels
 
 ### Key labels
- - bug
- - enhancement
 
- ### Standard labels
- - configuration
- - deployment
- - maintance
- - tests
- - pipeline
+- bug
+- enhancement
 
- ### Extra labels
- - feature request
+### Standard labels
+
+- configuration
+- deployment
+- maintance
+- tests
+- pipeline
+
+### Extra labels
+
+- feature

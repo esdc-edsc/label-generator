@@ -1,0 +1,17 @@
+[
+    {
+        "name": "p1",
+        "color": "#FE0000",
+        "desc": "Top priority for the project."
+    },
+    {
+        "name": "p2",
+        "color": "#FE1010",
+        "desc": "Priority Level 2"
+    },
+    {
+        "name": "p3",
+        "color": "#FE2020",
+        "desc": "Priority Level 3"
+    }
+]

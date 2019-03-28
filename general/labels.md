@@ -3,12 +3,15 @@
 ## Included labels
 
 ### Key labels
- - documentation
- - duplicate
- - translation
 
- ### Standard labels
- - question
- - wontfix
+- documentation
+- duplicate
+- translation
 
- ### Extra labels
+### Standard labels
+
+- question
+- wontfix
+- discussion
+
+### Extra labels
