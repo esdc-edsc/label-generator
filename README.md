@@ -28,7 +28,7 @@ You will also need to be able to provide information about the project you want 
 ### Project info
 
 * Project ID  
-   Found in Project > Settings > Gerneral > Gernal project > Project ID  
+   Found in Project > Settings > General > General project > Project ID  
 * User Token  
    Needs to be created from User > Settings > Access Tokens  
    Give it a name and an expiry date if you want. Grant it the scope of api.

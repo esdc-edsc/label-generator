@@ -9,7 +9,7 @@ do {
     "
     What types of labels do you want to add to your project?
     0 - Key labels from all types
-    1 - Gerneral labels
+    1 - General labels
     2 - Dev labels
     3 - Priority labels
     4 - A11Y labels

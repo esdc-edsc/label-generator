@@ -1,4 +1,4 @@
-# Gerneric Labels
+# General Labels
 
 ## Included labels
 
