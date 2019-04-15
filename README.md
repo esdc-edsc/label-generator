@@ -1,6 +1,6 @@
 # ESDC Labels
 
-Defining groups of labels that can be imported to other projects for commonality within the department.
+Defining groups of labels that can be imported to other projects and groups for commonality within the department.
 
 ## Avaliable Labels
 
@@ -25,7 +25,7 @@ Double click `quicklaunch.bat`
 In order to run the scripts in this project you will need to have all the depenancies installed.
 You will also need to be able to provide information about the project you want to add the labels to.
 
-### Project info
+### Details
 
 * Project ID or Group ID
    Found in Project > Settings > General > General project > Project ID
