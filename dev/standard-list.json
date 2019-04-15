@@ -10,9 +10,9 @@
         "desc": "This issue has to do with a deployment"
     },
     {
-        "name": "maintance",
+        "name": "maintenance",
         "color": "#fef2c0",
-        "desc": "General maintance (avoid using)"
+        "desc": "General maintenance (avoid using)"
     },
     {
         "name": "tests",
