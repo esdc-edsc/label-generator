@@ -22,13 +22,14 @@ Double click `quicklaunch.bat`
 
 ## Requirements
 
-In order to run the scripts in this project you will need to have all the depenancies installed. 
+In order to run the scripts in this project you will need to have all the depenancies installed.
 You will also need to be able to provide information about the project you want to add the labels to.
 
 ### Project info
 
-* Project ID  
-   Found in Project > Settings > General > General project > Project ID  
+* Project ID or Group ID
+   Found in Project > Settings > General > General project > Project ID
+   Or Group > Settings > General > Naming, visibility > Group ID
 * User Token  
    Needs to be created from User > Settings > Access Tokens  
    Give it a name and an expiry date if you want. Grant it the scope of api.

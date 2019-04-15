@@ -11,6 +11,7 @@ $gitlabEnv
 $projectId
 $userToken
 $curlLocation
+$GorP
 
 # gather info
 
@@ -49,12 +50,22 @@ IF ($gitlabEnvSelection -eq 1) {
 "
 You have chosen to use 'https://$gitlabEnv/' as your enviornment for gitlab.
 "
-"In order to add labels to your project we will need some info about the project you want to add the labels to."
-$projectId = Read-Host -Prompt 'What is the Project ID?'
+"In order to add labels to your project we will need some info about the project or group you want to add the labels to."
+
+$GorP = Read-Host -Prompt 'Are you targeting a Group (G) or Project (p) for these labels?  (enter G or p)'
+
+IF ($GorP -eq "G") {
+    $GorP = "groups"
+    $projectId = Read-Host -Prompt 'What is the Group ID?'
+} Else {
+    $GorP = "projects"
+    $projectId = Read-Host -Prompt 'What is the Project ID?'
+}
+
 $userToken = Read-Host -Prompt 'What is your User Token?'
 
 ## select and add labels
-.\scripts\select.ps1 $userToken "https://$gitlabEnv/api/v4/projects/$projectId/labels"
+.\scripts\select.ps1 $userToken "https://$gitlabEnv/api/v4/$GorP/$projectId/labels"
 
 "
   Thanks for using ESDC Labels!
