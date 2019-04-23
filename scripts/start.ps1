@@ -19,6 +19,7 @@ $GorP
 1- C:\Git\Git\mingw64\bin\curl.exe
 2- C:\Windows\System32\curl\curl.exe
 3- C:\Windows\SysWOW64\curl\curl.exe
+4- C:\Program Files\Git\mingw64\bin\curl.exe
 0- Other"
 $curlSelector = Read-Host
 IF ($curlSelector -eq 1) {
@@ -27,6 +28,8 @@ IF ($curlSelector -eq 1) {
     $curlLocation = "C:\Windows\System32\curl\curl.exe"
 } ElseIf ($curlSelector -eq 3) {
     $curlLocation = "C:\Windows\SysWOW64\curl\curl.exe"
+} ElseIf ($curlSelector -eq 4) {
+    $curlLocation = "C:\Program Files\Git\mingw64\bin\curl.exe"
 } Else {
     $curlLocation = Read-Host -Prompt 'Please enter your curl location'
 }
