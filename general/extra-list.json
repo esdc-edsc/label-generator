@@ -1,3 +1,7 @@
 [
-    
+    {
+        "name": "pending",
+        "color": "#ad8599",
+        "desc": "Waiting on external factors"
+    }    
 ]
