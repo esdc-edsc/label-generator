@@ -20,7 +20,7 @@ do {
         .\scripts\add.ps1 $userToken $gitlabLink ".\dev\key-list.json"
         .\scripts\add.ps1 $userToken $gitlabLink ".\general\key-list.json"
         .\scripts\add.ps1 $userToken $gitlabLink ".\priority\key-list.json"
-    } Else {
+    } ElseIF ($selection -In 1..3) {
         $selectedType
         IF ($selection -eq 1) {
             $selectedType = "general"
@@ -28,10 +28,7 @@ do {
             $selectedType = "dev"
         } ElseIf ($selection -eq 3) {
             $selectedType = "priority"
-        } Else {
-            "This option is not avaliable yet."
-        }
-
+        } 
         
         "
         What $selectedType labels do you want to add?
@@ -50,6 +47,8 @@ do {
         IF (3 -contains $levelSelection) {
             .\scripts\add.ps1 $userToken $gitlabLink ".\$selectedType\extra-list.json"
         }
+    } Else {
+        "This option is not avaliable yet."
     }
     
     " 
