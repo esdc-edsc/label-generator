@@ -2,23 +2,26 @@
 
 To help a project prioritise issues.
 
+These labels also are scoped. Note that the functionality of scoped labels only works with GitLab Premium.  
+Read more about it in [GitLab Docs](https://docs.gitlab.com/ee/user/project/labels.html#scoped-labels-premium)
+
 ## Included labels
 
 ### Key labels
 
-- p1
-- p2
-- p3
+- priority::1
+- priority::2
+- priority::3
 
 ### Standard labels
 
-- p4
-- p5
+- priority::4
+- priority::5
 
 ### Extra labels
 
-- p6
-- p7
-- p8
-- p9
-- p10
+- priority::6
+- priority::7
+- priority::8
+- priority::9
+- priority::10

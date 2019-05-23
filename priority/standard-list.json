@@ -1,11 +1,11 @@
 [
     {
-        "name": "p4",
+        "name": "priority::4",
         "color": "#FE3030",
         "desc": "Priority Level 4"
     },
     {
-        "name": "p5",
+        "name": "priority::5",
         "color": "#FE4040",
         "desc": "Priority Level 5"
     }
