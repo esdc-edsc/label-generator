@@ -1,21 +1,19 @@
 # output with plain text - spacing matters
 "
   ====================================================================================
-  | Thank you for using ESDC Labels!                                                 |
+  | Thank you for using ESDC Label Generator!                                        |
   | We need some information from you before we start adding labels to your project. |
   ====================================================================================
 "
 
 # variables
-$gitlabEnv
-$projectId
-$userToken
+$gitPlatform
 $curlLocation
-$GorP
 
 # gather info
 
-"Where do you have curl.exe installed?
+"
+Where do you have curl.exe installed?
 1- C:\Git\Git\mingw64\bin\curl.exe
 2- C:\Windows\System32\curl\curl.exe
 3- C:\Windows\SysWOW64\curl\curl.exe
@@ -36,39 +34,27 @@ IF ($curlSelector -eq 1) {
 Remove-Item alias:curl
 Set-Alias -Name curl -Value "$curlLocation"
 
-"Which GitLab enviornment are you using? 
-1- GCCode
-2- GitLab.com
-0- Other"
-$gitlabEnvSelection = Read-Host
-
-IF ($gitlabEnvSelection -eq 1) {
-    $gitlabEnv = "gccode.ssc-spc.gc.ca"
-} ElseIf ($gitlabEnvSelection -eq 2) {
-    $gitlabEnv = "gitlab.com"
-} Else {
-    $gitlabEnv = Read-Host -Prompt 'Please enter your GitLab enviornment.'
+$gitPlatform = ""
+While ($gitPlatform -eq "") {
+    "
+    Which Git platform are you using?
+    1- GitHub
+    2- GitLab
+    (Sorry, we don't support any other platforms at the moment.)"
+    $gitPatformSelection = Read-Host
+    
+    IF ($gitPatformSelection -eq 1) {
+        $gitPlatform = "hub"
+        .\scripts\hub.ps1
+    } ElseIf ($gitPatformSelection -eq 2) {
+        $gitPlatform = "lab"
+        .\scripts\lab.ps1
+    } Else {
+        "Sorry, you must select one of the options to continue."
+    }    
 }
 
-"
-You have chosen to use 'https://$gitlabEnv/' as your enviornment for gitlab.
-"
-"In order to add labels to your project we will need some info about the project or group you want to add the labels to."
 
-$GorP = Read-Host -Prompt 'Are you targeting a Group (G) or Project (p) for these labels?  (enter G or p)'
-
-IF ($GorP -eq "G") {
-    $GorP = "groups"
-    $projectId = Read-Host -Prompt 'What is the Group ID?'
-} Else {
-    $GorP = "projects"
-    $projectId = Read-Host -Prompt 'What is the Project ID?'
-}
-
-$userToken = Read-Host -Prompt 'What is your User Token?'
-
-## select and add labels
-.\scripts\select.ps1 $userToken "https://$gitlabEnv/api/v4/$GorP/$projectId/labels"
 
 "
   Thanks for using ESDC Labels!
