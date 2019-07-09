@@ -18,6 +18,11 @@ Foreach ($label in $labelData) {
     If ($hublab -eq "lab") {
         curl --data "name=$name&color=$color&description=$desc" --header "PRIVATE-TOKEN: $accessToken" "$gitLink"        
     } Else {
-        curl -u $accessToken:x-oauth-basic --include --request POST --data "{'name':'$name','color':'$color','description':'$desc'}" "$gitLink"
+        $user = $accessToken + ":x-oauth-basic"
+        $color = $color -replace '#',''
+        $data = "{""name"":""$name"",""color"":""$color"",""description"":""$desc""}" # 
+        $cmd = "curl --data '$data' -u $user ""$gitLink"""
+        iex $cmd
+        # curl --data $data -u $user "$gitLink"
     }
 }
