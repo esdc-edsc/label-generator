@@ -20,9 +20,7 @@ Foreach ($label in $labelData) {
     } Else {
         $user = $accessToken + ":x-oauth-basic"
         $color = $color -replace '#',''
-        $data = "{""name"":""$name"",""color"":""$color"",""description"":""$desc""}" # 
-        $cmd = "curl --data '$data' -u $user ""$gitLink"""
-        iex $cmd
-        # curl --data $data -u $user "$gitLink"
+
+        curl -u $user --data "{\""name\"":\""$name\"",\""color\"":\""$color\""}" $gitLink
     }
 }
