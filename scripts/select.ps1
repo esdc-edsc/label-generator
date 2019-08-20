@@ -1,8 +1,8 @@
 $userToken = $args[0];
 $gitlabLink = $args[1];
+$hublab = $args[2];
 
 $addMore = "n"
-$jsonFileList
 
 # add different sets of labels
 do {
@@ -12,14 +12,13 @@ do {
     1 - General labels
     2 - Dev labels
     3 - Priority labels
-    4 - A11Y labels
-    5 - Security labels"
+    (In development: A11Y labels, Security labels)"
     $selection = Read-Host
     
     IF ($selection -eq 0) {
-        .\scripts\add.ps1 $userToken $gitlabLink ".\dev\key-list.json"
-        .\scripts\add.ps1 $userToken $gitlabLink ".\general\key-list.json"
-        .\scripts\add.ps1 $userToken $gitlabLink ".\priority\key-list.json"
+        .\scripts\add.ps1 $hublab $userToken $gitlabLink ".\dev\key-list.json"
+        .\scripts\add.ps1 $hublab $userToken $gitlabLink ".\general\key-list.json"
+        .\scripts\add.ps1 $hublab $userToken $gitlabLink ".\priority\key-list.json"
     } ElseIF ($selection -In 1..3) {
         $selectedType
         IF ($selection -eq 1) {
@@ -39,13 +38,13 @@ do {
         $levelSelection = Read-Host
 
         IF (1, 2, 3 -contains $levelSelection) {
-            .\scripts\add.ps1 $userToken $gitlabLink ".\$selectedType\key-list.json"
+            .\scripts\add.ps1 $hublab $userToken $gitlabLink ".\$selectedType\key-list.json"
         } 
         If (2, 3 -contains $levelSelection) {
-            .\scripts\add.ps1 $userToken $gitlabLink ".\$selectedType\standard-list.json"
+            .\scripts\add.ps1 $hublab $userToken $gitlabLink ".\$selectedType\standard-list.json"
         } 
         IF (3 -contains $levelSelection) {
-            .\scripts\add.ps1 $userToken $gitlabLink ".\$selectedType\extra-list.json"
+            .\scripts\add.ps1 $hublab $userToken $gitlabLink ".\$selectedType\extra-list.json"
         }
     } Else {
         "This option is not avaliable yet."

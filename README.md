@@ -15,7 +15,7 @@ Defining groups of labels that can be imported to other projects and groups for 
 ## Instalation
 
 ```bash
-git clone https://gccode.ssc-spc.gc.ca/iitb-dgiit/esdc-labels.git
+git clone https://gccode.ssc-spc.gc.ca/esdc-edsc/label-generator.git
 ```
 
 Double click `quicklaunch.bat`
@@ -26,6 +26,13 @@ In order to run the scripts in this project you will need to have all the depena
 You will also need to be able to provide information about the project you want to add the labels to.
 
 ### Details
+
+#### GitHub details
+
+* Personal access token https://github.com/settings/tokens
+
+
+#### GitLab details
 
 * Project ID or Group ID
    Found in Project > Settings > General > General project > Project ID
