@@ -15,7 +15,7 @@ Defining groups of labels that can be imported to other projects and groups for 
 ## Instalation
 
 ```bash
-git clone https://gccode.ssc-spc.gc.ca/esdc-edsc/label-generator.git
+git clone https://github.com/esdc-devcop/label-generator.git
 ```
 
 Double click `quicklaunch.bat`
