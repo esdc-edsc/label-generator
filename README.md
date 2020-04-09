@@ -1,8 +1,11 @@
-# ESDC Labels
+# ESDC Label Generator
 
-Defining groups of labels that can be imported to other projects and groups for commonality within the department.
+**Get your projects default labels set up quickly with ease with this project!**
 
-## Avaliable Labels
+This project identifies groups of labels that are common to almost every project.
+Providing scripts to connect to GitLab or GitHubs APIs to easily choose and add those labels directly into your project.
+
+## Available Labels
 
 * [General Labels](general/labels.md)
 * [Dev Labels](dev/labels.md)
@@ -12,7 +15,7 @@ Defining groups of labels that can be imported to other projects and groups for 
 
 [Contribution Guide](CONTRIBUTING.md)
 
-## Instalation
+## Installation
 
 ```bash
 git clone https://gccode.ssc-spc.gc.ca/esdc-edsc/label-generator.git
@@ -22,7 +25,7 @@ Double click `quicklaunch.bat`
 
 ## Requirements
 
-In order to run the scripts in this project you will need to have all the depenancies installed.
+In order to run the scripts in this project you will need to have all the dependencies installed.
 You will also need to be able to provide information about the project you want to add the labels to.
 
 ### Details
@@ -41,7 +44,7 @@ You will also need to be able to provide information about the project you want 
    Needs to be created from User > Settings > Access Tokens  
    Give it a name and an expiry date if you want. Grant it the scope of api.
 
-### Depenancies
+### Dependencies
 
 * Git
 * Powershell
